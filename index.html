@@ -43,7 +43,7 @@
 <body class="bg-white text-gray-900">
 
     <header x-data="{ open: false }">
-        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between font-semibold">
 
             <!-- Logo (PNG Image) -->
             <div class="flex items-center">
@@ -51,30 +51,30 @@
             </div>
 
             <!-- Navigation Links (Desktop - Now shown on lg and up) -->
-            <ul class="hidden lg:flex gap-6 text-sm font-medium text-gray-700">
-            <li><a href="#home" class="hover:text-green-700 transition">Home</a></li>
-            <li><a href="#about" class="hover:text-green-700 transition">About Us</a></li>
-            <li><a href="#services" class="hover:text-green-700 transition">Services</a></li>
-            <li><a href="#clients" class="hover:text-green-700 transition">Clients</a></li>
-            <li><a href="#distribution" class="hover:text-green-700 transition">Distribution</a></li>
-            <li><a href="#contact" class="hover:text-green-700 transition">Contact Us</a></li>
+            <ul class="hidden lg:flex gap-6  font-semibold text-black">
+                <li><a href="#home" class="hover:text-green-700 transition">Home</a></li>
+                <li><a href="#about" class="hover:text-green-700 transition">About Us</a></li>
+                <li><a href="#services" class="hover:text-green-700 transition">Services</a></li>
+                <li><a href="#clients" class="hover:text-green-700 transition">Clients</a></li>
+                <li><a href="#distribution" class="hover:text-green-700 transition">Distribution</a></li>
+                <li><a href="#contact" class="hover:text-green-700 transition">Contact Us</a></li>
             </ul>
 
             <!-- CTA Button (Desktop - Now shown on lg and up) -->
             <div class="hidden lg:block">
-            <a href="#contact" class="bg-[#112E2C] text-[#A1CD38] px-5 py-2 rounded-lg hover:bg-green-800 transition">
-                Get Started
-            </a>
+                <a href="#contact" class="bg-[#112E2C] text-[#A1CD38] px-5 py-2 rounded-lg hover:bg-green-800 transition">
+                    Get Started
+                </a>
             </div>
 
             <!-- Mobile Menu Button (Visible below lg) -->
             <div class="lg:hidden">
-            <button @click="open = !open" class="text-gray-700 focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
+                <button @click="open = !open" class="text-gray-700 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
             </div>
         </nav>
 
