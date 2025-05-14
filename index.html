@@ -33,8 +33,7 @@
   <style>
   .rotate-left-15 {
     transform: rotate(-15deg);
-  }
-  
+  } 
 </style>
 
 
@@ -52,7 +51,7 @@
 
             <!-- Navigation Links (Desktop - Now shown on lg and up) -->
             <ul class="hidden lg:flex gap-6  font-semibold text-black">
-                <li><a href="#home" class="hover:text-green-700 transition">Home</a></li>
+                <li><a href="#home" class=" active hover:text-green-700 transition">Home</a></li>
                 <li><a href="#about" class="hover:text-green-700 transition">About Us</a></li>
                 <li><a href="#services" class="hover:text-green-700 transition">Services</a></li>
                 <li><a href="#clients" class="hover:text-green-700 transition">Clients</a></li>
@@ -389,6 +388,38 @@
         </div>
 
     </div>
+    </section>
+
+    <!-- Trusted CTA Section -->
+    <section class="relative bg-white py-2 overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 relative z-10 bg-[#112E2C]">
+
+            <!-- Left: Full-Width Image with Gradient Overlay -->
+            <div class="relative w-full">
+                <img src="Assets/images/trusted_CTA.png" alt="Trusted Businesses"
+                    class="w-full h-80 object-cover rounded-r-lg shadow-lg" />
+
+                <!-- Gradient Overlay -->
+                <div class="absolute top-0 left-1/2 w-1/2 h-full z-10 pointer-events-none rounded-r-lg"
+                    style="background: linear-gradient(to right, rgba(17, 46, 44, 0) 0%, #112E2C 100%);">
+                </div>
+            </div>
+
+            <!-- Right: Text Content Inside Container -->
+            <div class="relative z-20 px-6 lg:px-12">
+                <h2 class="text-4xl font-bold mb-2 leading-tight text-[#A1CD38]">
+                    Over 500 worldwide <br /> Businesses Trust Us.
+                </h2>
+                <p class="text-base mb-3 text-white ">
+                    Trusted by over 500 businesses worldwide for reliable, <br />
+                    transparent, and scalable trade solutions.
+                </p>
+                <button class="bg-[#F4C424] text-[#112E2C] font-bold py-3 px-6 rounded-lg hover:bg-yellow-400 transition duration-300">
+                    ONBOARD ME TODAY
+                </button>
+            </div>
+
+        </div>
     </section>
 
     <!-- Contact  Section -->
