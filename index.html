@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Meta Tags -->
+  <title>DAC - Distribution Assistance Corporation | Empowering Entrepreneur Farmers</title>
+  <meta name="description" content="DAC (Distribution Assistance Corporation) empowers entrepreneur farmers by facilitating the seamless distribution of their agricultural products to the European Union (EU) market." />
+  <meta name="keywords" content="DAC, Distribution Assistance Corporation, EU agriculture export, entrepreneur farmers, farm produce distribution, export to EU, agricultural logistics" />
+  <meta name="author" content="DAC - Distribution Assistance Corporation" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="DAC - Distribution Assistance Corporation" />
+  <meta property="og:description" content="Helping entrepreneur farmers distribute their agricultural products to the EU." />
+  <meta property="og:image" content="https://yourdomain.com/images/og-image.jpg" />
+  <meta property="og:url" content="https://yourdomain.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DAC - Distribution Assistance Corporation" />
+  <meta name="twitter:description" content="Empowering farmers to access EU markets through efficient agricultural product distribution." />
+  <meta name="twitter:image" content="https://yourdomain.com/images/twitter-card.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</head>
+
+<body class="bg-white text-gray-900">
+    <header  x-data="{ open: false }">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            
+            <!-- Logo (PNG Image) -->
+            <div class="flex items-center">
+            <img src="Assets/images/logo.png" alt="DAC Logo" class="h-10 w-auto" />
+            </div>
+
+            <!-- Navigation Links (Desktop) -->
+            <ul class="hidden md:flex gap-6 text-sm font-medium text-gray-700">
+            <li><a href="#home" class="hover:text-green-700 transition">Home</a></li>
+            <li><a href="#about" class="hover:text-green-700 transition">About Us</a></li>
+            <li><a href="#services" class="hover:text-green-700 transition">Services</a></li>
+            <li><a href="#clients" class="hover:text-green-700 transition">Clients</a></li>
+            <li><a href="#distribution" class="hover:text-green-700 transition">Distribution</a></li>
+            <li><a href="#contact" class="hover:text-green-700 transition">Contact Us</a></li>
+            </ul>
+
+            <!-- CTA Button (Desktop) -->
+            <div class="hidden md:block">
+            <a href="#contact" class="bg-[#112E2C] text-[#A1CD38] px-5 py-2 rounded-lg hover:bg-green-800 transition">
+                Get Started
+            </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+            <button @click="open = !open" class="text-gray-700 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Dropdown -->
+        <div x-show="open" x-transition class="md:hidden bg-white border-t border-gray-200 px-4 pb-4">
+            <ul class="space-y-3 text-sm font-medium text-gray-700">
+            <li><a href="#home" class="block hover:text-green-700">Home</a></li>
+            <li><a href="#about" class="block hover:text-green-700">About Us</a></li>
+            <li><a href="#services" class="block hover:text-green-700">Services</a></li>
+            <li><a href="#clients" class="block hover:text-green-700">Clients</a></li>
+            <li><a href="#distribution" class="block hover:text-green-700">Distribution</a></li>
+            <li><a href="#contact" class="block hover:text-green-700">Contact Us</a></li>
+            <li>
+                <a href="#contact" class="block bg-[#112E2C] text-[#A1CD38] px-4 py-2 rounded-lg text-center hover:bg-green-800 transition">
+                Get Started
+                </a>
+            </li>
+            </ul>
+        </div>
+    </header>
+
+</body>
+
+
+</html>
