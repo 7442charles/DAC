@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>DAC - Distribution Assistance Corporation | Empowering Entrepreneur Farmers</title>
+  <meta name="description" content="DAC (Distribution Assistance Corporation) empowers entrepreneur farmers by facilitating the seamless distribution of their agricultural products to the European Union (EU) market." />
+  <meta name="keywords" content="DAC, Distribution Assistance Corporation, EU agriculture export, entrepreneur farmers, farm produce distribution, export to EU, agricultural logistics" />
+  <meta name="author" content="DAC - Distribution Assistance Corporation" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="DAC - Distribution Assistance Corporation" />
+  <meta property="og:description" content="Helping entrepreneur farmers distribute their agricultural products to the EU." />
+  <meta property="og:image" content="https://dac.co.ke/Assets/images/favicon_io/favicon.ico" />
+  <meta property="og:url" content="https://dac.co.ke" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DAC - Distribution Assistance Corporation" />
+  <meta name="twitter:description" content="Empowering farmers to access EU markets through efficient agricultural product distribution." />
+  <meta name="twitter:image" content="https://dac.co.ke/Assets/images/favicon_io/favicon.ico" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="Assets/images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Assets/images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Assets/images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="Assets/images/favicon_io/site.webmanifest">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <style>
+  .rotate-left-15 {
+    transform: rotate(-15deg);
+  }
+  .animate-fade-in {
+      animation: fadeIn 0.5s ease-out;
+  }
+
+  @keyframes fadeIn {
+      from {
+          opacity: 0;
+          transform: translateY(10px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+  /* Modal specific animation */
+  .modal-enter-active, .modal-leave-active {
+    transition: opacity 0.3s ease;
+  }
+  .modal-enter-from, .modal-leave-to {
+    opacity: 0;
+  }
+  .modal-content-enter-active, .modal-content-leave-active {
+    transition: transform 0.3s ease;
+  }
+  .modal-content-enter-from, .modal-content-leave-to {
+    transform: translateY(-20px);
+  }
+</style>
+</head>
+
+<body class="bg-white text-gray-900">
+
+    <header x-data="{ open: false }">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between font-semibold">
+
+            <!-- Logo (PNG Image) -->
+            <div class="flex items-center">
+            <img src="Assets/images/logo.png" alt="DAC Logo" class="h-10 w-auto" />
+            </div>
+
+            <!-- Navigation Links (Desktop - Now shown on lg and up) -->
+            <ul class="hidden lg:flex gap-6  font-semibold text-black">
+                <li><a href="index.html" class=" active hover:text-green-700 transition">Home</a></li>
+                <li><a href="index.html#about" class="hover:text-green-700 transition">About Us</a></li>
+                <li><a href="index.html#services" class="hover:text-green-700 transition">Services</a></li>
+                <li><a href="index.html#clients" class="hover:text-green-700 transition">Clients</a></li>
+                <li><a href="index.html#distribution" class="hover:text-green-700 transition">Distribution</a></li>
+                <li><a href="index.html#contact" class="hover:text-green-700 transition">Contact Us</a></li>
+            </ul>
+
+            <!-- CTA Button (Desktop - Now shown on lg and up) -->
+            <div class="hidden lg:block">
+                <a href="index.html#contact" class="bg-[#112E2C] text-[#A1CD38] px-5 py-2 rounded-lg hover:bg-green-800 transition">
+                    Get Started
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button (Visible below lg) -->
+            <div class="lg:hidden">
+                <button @click="open = !open" class="text-gray-700 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu Dropdown (Visible below lg) -->
+        <div x-show="open" x-transition class="lg:hidden bg-white border-t border-gray-200 px-4 pb-4">
+            <ul class="space-y-3 text-sm font-medium text-gray-700">
+            <li><a href="index.html" class="block hover:text-green-700">Home</a></li>
+            <li><a href="index.html#about" class="block hover:text-green-700">About Us</a></li>
+            <li><a href="index.html#services" class="block hover:text-green-700">Services</a></li>
+            <li><a href="index.html#clients" class="block hover:text-green-700">Clients</a></li>
+            <li><a href="index.html#distribution" class="block hover:text-green-700">Distribution</a></li>
+            <li><a href="index.html#contact" class="block hover:text-green-700">Contact Us</a></li>
+            <li>
+                <a href="index.html#contact"
+                class="block bg-[#112E2C] text-[#A1CD38] px-4 py-2 rounded-lg text-center hover:bg-green-800 transition">
+                Get Started
+                </a>
+            </li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+    <section class="text-center mb-12">
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-[#112E2C] mb-4 drop-shadow-sm">
+            <span class="text-[#A1CD38]">Start Your Onboarding</span> Journey with DAC
+        </h1>
+        <p class="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            Let's get you started. Fill in the required details to begin your seamless journey of distributing agricultural products to the European Union market.
+        </p>
+    </section>
+
+    <section x-data="{
+        currentStep: 1,
+        showSuccessModal: false,
+        modalTimeout: null, // To store the timeout ID
+        formData: {
+            businessName: '',
+            businessLogo: null, // For file uploads
+            location: '',
+            productCategory: '',
+            kraDocuments: null,
+            exportLicense: null,
+            haccp: null,
+            certificateOfOrigin: null,
+            packagingList: null,
+            directors: [] // Array to hold director objects {name: '', rank: ''}
+        },
+        addDirector() {
+            this.formData.directors.push({ name: '', rank: '' });
+        },
+        removeDirector(index) {
+            this.formData.directors.splice(index, 1);
+        },
+        // Helper to get file name for display
+        getFileName(file) {
+            return file ? file.name : 'No file chosen';
+        },
+        // Function to show modal and set timeout
+        showModal() {
+            this.showSuccessModal = true;
+            // Clear any existing timeout to prevent multiple from running
+            clearTimeout(this.modalTimeout);
+            this.modalTimeout = setTimeout(() => {
+                this.closeModalAndRedirect(); // Call the new function
+            }, 30000); // 30 seconds
+        },
+        // Function to close modal and clear timeout, then redirect
+        closeModalAndRedirect() {
+            this.showSuccessModal = false;
+            clearTimeout(this.modalTimeout);
+            window.location.href = 'index.html'; // Redirect to homepage
+        }
+    }" class="max-w-4xl mx-auto bg-gradient-to-br from-white to-gray-100 p-8 rounded-xl shadow-2xl border border-gray-200">
+        <div class="flex justify-between items-center mb-10 relative">
+            <div class="absolute inset-x-12 h-1 bg-gray-200 top-1/2 transform -translate-y-1/2 z-0"></div>
+
+            <template x-for="(step, index) in [
+                { name: 'Basic Details', value: 1 },
+                { name: 'Legal Documents', value: 2 },
+                { name: 'Business Team', value: 3 },
+                { name: 'Confirm Details', value: 4 }
+            ]" :key="index">
+                <div class="relative z-10 flex flex-col items-center group cursor-pointer" @click="currentStep = step.value">
+                    <div class="w-12 h-12 rounded-full flex items-center justify-center
+                                text-white font-bold text-lg transition-all duration-300 ease-in-out
+                                transform group-hover:scale-110 group-hover:shadow-lg"
+                         :class="{
+                             'bg-[#A1CD38] shadow-md': currentStep >= step.value,
+                             'bg-gray-400 group-hover:bg-gray-500': currentStep < step.value
+                         }">
+                        <span x-text="step.value"></span>
+                    </div>
+                    <p class="mt-3 text-sm text-center font-medium transition-colors duration-300"
+                       :class="{ 'text-[#112E2C] font-semibold': currentStep >= step.value, 'text-gray-600': currentStep < step.value }"
+                       x-text="step.name"></p>
+                </div>
+            </template>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-inner min-h-96 border border-gray-100">
+            <div x-show="currentStep === 1" class="animate-fade-in">
+                <h2 class="text-2xl font-bold text-[#112E2C] mb-6 border-b pb-3">Step 1: Basic Details</h2>
+                <div class="space-y-6">
+                    <div>
+                        <label for="businessName" class="block text-sm font-medium text-gray-700 mb-1">Business Name <span class="text-red-500">*</span></label>
+                        <input type="text" id="businessName" x-model="formData.businessName" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-[#A1CD38] focus:border-[#A1CD38] transition duration-200" placeholder="e.g., Green Harvest Farms" required>
+                    </div>
+                    <div>
+                        <label for="businessLogo" class="block text-sm font-medium text-gray-700 mb-1">Business Logo (Optional)</label>
+                        <input type="file" id="businessLogo" @change="formData.businessLogo = $event.target.files[0]" class="mt-1 block w-full text-sm text-gray-500
+                                file:mr-4 file:py-2 file:px-4
+                                file:rounded-full file:border-0
+                                file:text-sm file:font-semibold
+                                file:bg-[#A1CD38] file:text-white
+                                hover:file:bg-[#8acb2e] file:cursor-pointer transition duration-200" accept="image/*">
+                        <p x-text="getFileName(formData.businessLogo)" class="text-xs text-gray-500 mt-1"></p>
+                    </div>
+                    <div>
+                        <label for="location" class="block text-sm font-medium text-gray-700 mb-1">Location (Country, City) <span class="text-red-500">*</span></label>
+                        <input type="text" id="location" x-model="formData.location" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-[#A1CD38] focus:border-[#A1CD38] transition duration-200" placeholder="e.g., Kenya, Nairobi" required>
+                    </div>
+                    <div>
+                        <label for="productCategory" class="block text-sm font-medium text-gray-700 mb-1">Product Category for Distribution <span class="text-red-500">*</span></label>
+                        <select id="productCategory" x-model="formData.productCategory" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-[#A1CD38] focus:border-[#A1CD38] transition duration-200 bg-white" required>
+                            <option value="">Select a category</option>
+                            <option value="Fruits">Fruits</option>
+                            <option value="Vegetables">Vegetables</option>
+                            <option value="Grains">Grains</option>
+                            <option value="Dairy">Dairy</option>
+                            <option value="Meat">Meat</option>
+                            <option value="Other">Other (specify later)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div x-show="currentStep === 2" class="animate-fade-in">
+                <h2 class="text-2xl font-bold text-[#112E2C] mb-6 border-b pb-3">Step 2: Legal Documents</h2>
+                <p class="text-gray-600 mb-6 text-sm">Please upload all required documents in PDF format where specified. Fields marked with <span class="text-red-500">*</span> are mandatory.</p>
+                <div class="space-y-6">
+                    <div>
+                        <label for="kraDocuments" class="block text-sm font-medium text-gray-700 mb-1">KRA Documents (.pdf) <span class="text-red-500">*</span></label>
+                        <input type="file" id="kraDocuments" @change="formData.kraDocuments = $event.target.files[0]" class="mt-1 block w-full text-sm text-gray-500
+                            file:mr-4 file:py-2 file:px-4
+                            file:rounded-full file:border-0
+                            file:text-sm file:font-semibold
+                            file:bg-[#A1CD38] file:text-white
+                            hover:file:bg-[#8acb2e] file:cursor-pointer transition duration-200" accept=".pdf" required>
+                        <p x-text="getFileName(formData.kraDocuments)" class="text-xs text-gray-500 mt-1"></p>
+                    </div>
+                    <div>
+                        <label for="exportLicense" class="block text-sm font-medium text-gray-700 mb-1">Export License (.pdf)</label>
+                        <input type="file" id="exportLicense" @change="formData.exportLicense = $event.target.files[0]" class="mt-1 block w-full text-sm text-gray-500
+                            file:mr-4 file:py-2 file:px-4
+                            file:rounded-full file:border-0
+                            file:text-sm file:font-semibold
+                            file:bg-[#A1CD38] file:text-white
+                            hover:file:bg-[#8acb2e] file:cursor-pointer transition duration-200" accept=".pdf">
+                        <p x-text="getFileName(formData.exportLicense)" class="text-xs text-gray-500 mt-1"></p>
+                    </div>
+                    <div>
+                        <label for="haccp" class="block text-sm font-medium text-gray-700 mb-1">HACCP Certificate (.pdf)</label>
+                        <input type="file" id="haccp" @change="formData.haccp = $event.target.files[0]" class="mt-1 block w-full text-sm text-gray-500
+                            file:mr-4 file:py-2 file:px-4
+                            file:rounded-full file:border-0
+                            file:text-sm file:font-semibold
+                            file:bg-[#A1CD38] file:text-white
+                            hover:file:bg-[#8acb2e] file:cursor-pointer transition duration-200" accept=".pdf">
+                        <p x-text="getFileName(formData.haccp)" class="text-xs text-gray-500 mt-1"></p>
+                    </div>
+                    <div>
+                        <label for="certificateOfOrigin" class="block text-sm font-medium text-gray-700 mb-1">Certificate of Origin (.pdf)</label>
+                        <input type="file" id="certificateOfOrigin" @change="formData.certificateOfOrigin = $event.target.files[0]" class="mt-1 block w-full text-sm text-gray-500
+                            file:mr-4 file:py-2 file:px-4
+                            file:rounded-full file:border-0
+                            file:text-sm file:font-semibold
+                            file:bg-[#A1CD38] file:text-white
+                            hover:file:bg-[#8acb2e] file:cursor-pointer transition duration-200" accept=".pdf">
+                        <p x-text="getFileName(formData.certificateOfOrigin)" class="text-xs text-gray-500 mt-1"></p>
+                    </div>
+                    <div>
+                        <label for="packagingList" class="block text-sm font-medium text-gray-700 mb-1">Packaging List (.pdf)</label>
+                        <input type="file" id="packagingList" @change="formData.packagingList = $event.target.files[0]" class="mt-1 block w-full text-sm text-gray-500
+                            file:mr-4 file:py-2 file:px-4
+                            file:rounded-full file:border-0
+                            file:text-sm file:font-semibold
+                            file:bg-[#A1CD38] file:text-white
+                            hover:file:bg-[#8acb2e] file:cursor-pointer transition duration-200" accept=".pdf">
+                        <p x-text="getFileName(formData.packagingList)" class="text-xs text-gray-500 mt-1"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div x-show="currentStep === 3" class="animate-fade-in">
+                <h2 class="text-2xl font-bold text-[#112E2C] mb-6 border-b pb-3">Step 3: Business Team (Directors & Management)</h2>
+                <div class="space-y-6">
+                    <template x-for="(director, index) in formData.directors" :key="index">
+                        <div class="border border-gray-200 p-6 rounded-lg bg-white relative shadow-sm">
+                            <h3 class="font-semibold text-gray-800 mb-3 text-lg">Team Member <span x-text="index + 1"></span></h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label :for="'directorName' + index" class="block text-sm font-medium text-gray-700 mb-1">Name <span class="text-red-500">*</span></label>
+                                    <input type="text" :id="'directorName' + index" x-model="director.name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-[#A1CD38] focus:border-[#A1CD38] transition duration-200" placeholder="Full Name" required>
+                                </div>
+                                <div>
+                                    <label :for="'directorRank' + index" class="block text-sm font-medium text-gray-700 mb-1">Rank/Role <span class="text-red-500">*</span></label>
+                                    <input type="text" :id="'directorRank' + index" x-model="director.rank" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-3 focus:ring-[#A1CD38] focus:border-[#A1CD38] transition duration-200" placeholder="e.g., CEO, Operations Manager" required>
+                                </div>
+                            </div>
+                            <button type="button" @click="removeDirector(index)" class="absolute top-3 right-3 text-red-600 hover:text-red-800 transition duration-200" title="Remove Team Member">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                </svg>
+                            </button>
+                        </div>
+                    </template>
+                    <button type="button" @click="addDirector()" class="mt-6 bg-[#112E2C] text-[#A1CD38] px-5 py-2.5 rounded-lg hover:bg-green-800 transition duration-300 flex items-center justify-center font-semibold text-base shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd" />
+                        </svg>
+                        Add Team Member
+                    </button>
+                </div>
+            </div>
+
+            <div x-show="currentStep === 4" class="animate-fade-in">
+                <h2 class="text-2xl font-bold text-[#112E2C] mb-6 border-b pb-3">Step 4: Confirm Details</h2>
+                <p class="text-gray-600 mb-6 text-sm">Please review all the information you've provided carefully. Once confirmed, your onboarding journey with DAC will be complete!</p>
+
+                <div class="space-y-8">
+                    <div class="bg-blue-50 p-6 rounded-lg shadow-sm border border-blue-100">
+                        <h3 class="text-xl font-semibold text-[#112E2C] mb-4 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-[#A1CD38]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Basic Details
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-3 gap-x-6 text-gray-700">
+                            <div><strong class="font-medium text-gray-800">Business Name:</strong> <span x-text="formData.businessName || 'N/A'"></span></div>
+                            <div><strong class="font-medium text-gray-800">Business Logo:</strong> <span x-text="getFileName(formData.businessLogo)"></span></div>
+                            <div><strong class="font-medium text-gray-800">Location:</strong> <span x-text="formData.location || 'N/A'"></span></div>
+                            <div><strong class="font-medium text-gray-800">Product Category:</strong> <span x-text="formData.productCategory || 'N/A'"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-green-50 p-6 rounded-lg shadow-sm border border-green-100">
+                        <h3 class="text-xl font-semibold text-[#112E2C] mb-4 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-[#A1CD38]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            Legal Documents
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-3 gap-x-6 text-gray-700">
+                            <div><strong class="font-medium text-gray-800">KRA Documents:</strong> <span x-text="getFileName(formData.kraDocuments)"></span></div>
+                            <div><strong class="font-medium text-gray-800">Export License:</strong> <span x-text="getFileName(formData.exportLicense)"></span></div>
+                            <div><strong class="font-medium text-gray-800">HACCP Certificate:</strong> <span x-text="getFileName(formData.haccp)"></span></div>
+                            <div><strong class="font-medium text-gray-800">Certificate of Origin:</strong> <span x-text="getFileName(formData.certificateOfOrigin)"></span></div>
+                            <div><strong class="font-medium text-gray-800">Packaging List:</strong> <span x-text="getFileName(formData.packagingList)"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-yellow-50 p-6 rounded-lg shadow-sm border border-yellow-100">
+                        <h3 class="text-xl font-semibold text-[#112E2C] mb-4 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-[#A1CD38]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h2a2 2 0 002-2V7a2 2 0 00-2-2h-3v4l-3-3-3 3V5H5a2 2 0 00-2 2v11a2 2 0 002 2h2m4 0h6m-6 0l-2 2m2-2l2 2m-3 0V3m-2 17V3" />
+                            </svg>
+                            Business Team (Directors & Management)
+                        </h3>
+                        <template x-if="formData.directors.length > 0">
+                            <ul class="list-disc list-inside space-y-2 text-gray-700">
+                                <template x-for="(director, index) in formData.directors" :key="index">
+                                    <li>
+                                        <strong class="font-medium text-gray-800" x-text="director.name || 'N/A'"></strong> (<span x-text="director.rank || 'N/A'"></span>)
+                                    </li>
+                                </template>
+                            </ul>
+                        </template>
+                        <template x-if="formData.directors.length === 0">
+                            <p class="text-gray-600 italic">No team members added yet.</p>
+                        </template>
+                    </div>
+                </div>
+
+                <button @click="showModal()"
+                        class="mt-10 bg-[#A1CD38] text-white px-8 py-3 rounded-lg font-bold text-xl hover:bg-[#8acb2e] transition duration-300 w-full shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#A1CD38] focus:ring-opacity-75">
+                    Confirm Onboarding
+                </button>
+            </div>
+        </div>
+
+        <div class="flex justify-between mt-8">
+            <button @click="currentStep = Math.max(1, currentStep - 1)"
+                    :class="{ 'opacity-50 cursor-not-allowed': currentStep === 1 }"
+                    class="bg-gray-300 text-gray-800 px-7 py-3 rounded-lg font-semibold hover:bg-gray-400 transition duration-300 shadow-md">
+                Previous
+            </button>
+            <button @click="currentStep = Math.min(4, currentStep + 1)"
+                    :class="{ 'opacity-50 cursor-not-allowed': currentStep === 4 }"
+                    class="bg-[#112E2C] text-[#A1CD38] px-7 py-3 rounded-lg font-semibold hover:bg-green-800 transition duration-300 shadow-md">
+                Next
+            </button>
+        </div>
+
+        <div x-show="showSuccessModal"
+             x-transition:enter="modal-enter-active"
+             x-transition:enter-start="modal-enter-from"
+             x-transition:enter-end="modal-enter-to"
+             x-transition:leave="modal-leave-active"
+             x-transition:leave-start="modal-leave-from"
+             x-transition:leave-end="modal-leave-to"
+             class="fixed inset-0 flex items-center justify-center z-50 p-4 backdrop-blur-sm"
+             @click.self="closeModalAndRedirect()"> <div x-transition:enter="modal-content-enter-active"
+                 x-transition:enter-start="modal-content-enter-from"
+                 x-transition:enter-end="modal-content-enter-to"
+                 x-transition:leave="modal-content-leave-active"
+                 x-transition:leave-start="modal-content-leave-from"
+                 x-transition:leave-end="modal-content-leave-to"
+                 class="bg-white rounded-lg p-8 max-w-md w-full text-center shadow-xl relative">
+                <button @click="closeModalAndRedirect()" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+
+                <img src="Assets/images/handshake.svg" alt="Handshake Success" class="w-24 h-24 mx-auto mb-6">
+
+                <h3 class="text-2xl font-bold text-[#112E2C] mb-3">Submission Received!</h3>
+                <p class="text-gray-700 mb-2">Your submission has been received.</p>
+                <p class="text-gray-700 mb-4 font-semibold">Status: <span class="text-[#A1CD38]">Processing</span></p>
+                <p class="text-gray-600 text-sm">Updates shall be sent to your registered email address.</p>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+</body>
+</html>
