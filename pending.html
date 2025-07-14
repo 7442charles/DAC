@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>DAC - Welcome to Portal | Business Approval Status</title>
+  <meta name="description" content="Welcome to your DAC portal. Check your business approval status and receive updates." />
+  <meta name="keywords" content="DAC, Distribution Assistance Corporation, EU agriculture export, entrepreneur farmers, farm produce distribution, export to EU, agricultural logistics, portal, status" />
+  <meta name="author" content="DAC - Distribution Assistance Corporation" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="DAC - Welcome to Portal" />
+  <meta property="og:description" content="Check your business approval status on the DAC portal." />
+  <meta property="og:image" content="https://dac.co.ke/Assets/images/favicon_io/favicon.ico" />
+  <meta property="og:url" content="https://dac.co.ke/portal.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DAC - Welcome to Portal" />
+  <meta name="twitter:description" content="Check your business approval status on the DAC portal." />
+  <meta name="twitter:image" content="https://dac.co.ke/Assets/images/favicon_io/favicon.ico" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="Assets/images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Assets/images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Assets/images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="Assets/images/favicon_io/site.webmanifest">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <style>
+  .rotate-left-15 {
+    transform: rotate(-15deg);
+  }
+  /* No specific modal animations needed for a full page, but keeping for consistency if other elements use it */
+  .animate-fade-in {
+      animation: fadeIn 0.5s ease-out;
+  }
+
+  @keyframes fadeIn {
+      from {
+          opacity: 0;
+          transform: translateY(10px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+</style>
+</head>
+
+<body class="bg-white text-gray-900">
+
+    <main class="container mx-auto px-4 py-12 flex flex-col items-center justify-center min-h-[calc(100vh-80px)]">
+    <div x-data="{
+        approvalStatus: 'Rejected', // FIXME: HAPA AM SETTING THIS VARIABLE DEPENDING OF WHAT COMING FROM THE BACKEND, EITHER {{APPROVED, PROCESSING, REJECTED}}
+
+        getStatusColor() {
+            if (this.approvalStatus === 'Approved') {
+                return 'text-[#A1CD38]'; // Theme Green
+            } else if (this.approvalStatus === 'Processing') {
+                return 'text-yellow-500'; // Theme Yellowish (Using a standard Tailwind yellow)
+            } else if (this.approvalStatus === 'Rejected') {
+                return 'text-red-500'; // Solid Red
+            }
+            return 'text-gray-700'; // Default color if status is unknown
+        }
+    }"
+    class="bg-white rounded-lg p-8 max-w-2xl w-full text-center shadow-xl border border-gray-100 animate-fade-in">
+        <div class="mb-8">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-[#112E2C] mb-2">
+                Hello, <span class="text-[#A1CD38]">FairViewEstate</span>, welcome to DAC portal!
+            </h1>
+            <p class="text-lg text-gray-700">Your Gateway to Seamless Export Distribution.</p>
+        </div>
+
+        <div class="bg-gray-50 rounded-lg p-6 shadow-inner border border-gray-200">
+            <h2 class="text-2xl font-bold text-[#112E2C] mb-6">BUSINESS Approval STATUS</h2>
+
+            <img src="Assets/images/handshake.svg" alt="Handshake Success" class="w-28 h-28 mx-auto mb-6">
+
+            <h3 class="text-xl font-bold text-[#112E2C] mb-3">Submission Received!</h3>
+            <p class="text-gray-700 mb-2">Your onboarding submission has been received.</p>
+            <p class="text-gray-700 mb-4 font-semibold text-xl">
+                Status: <span x-text="approvalStatus" :class="getStatusColor()"></span>
+            </p>
+            <p class="text-gray-600 text-base">Updates regarding your business approval status shall be sent to your registered email address.</p>
+        </div>
+
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <template x-if="approvalStatus === 'Approved'">
+                <a href="dashboard.html" class="inline-flex items-center bg-[#A1CD38] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#8acb2e] transition duration-300 shadow-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                    Go to Dashboard
+                </a>
+            </template>
+
+            <template x-if="approvalStatus === 'Rejected'">
+                <a href="review-submission.html" class="inline-flex items-center bg-red-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-600 transition duration-300 shadow-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Review Submission
+                </a>
+            </template>
+
+            <template x-if="approvalStatus === 'Processing'">
+                 <a href="index.html" class="inline-flex items-center bg-[#112E2C] text-[#A1CD38] px-6 py-3 rounded-lg font-semibold hover:bg-green-800 transition duration-300 shadow-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                    Back to Homepage
+                </a>
+            </template>
+
+            </div>
+    </div>
+</main>
+</body>
+</html>
