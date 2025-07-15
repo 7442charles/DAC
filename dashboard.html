@@ -20,15 +20,12 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.2/dist/sweetalert2.all.min.js"></script>
 
     <style>
-        /* Custom styles can go here if needed, but we'll try to stick to Tailwind */
         body {
-            font-family: 'Inter', sans-serif; /* A common modern sans-serif font */
+            font-family: 'Inter', sans-serif; 
         }
-        /* Hide sections by default, JavaScript will show the active one */
         .content-section {
             display: none;
         }
-        /* Always show the active section */
         .content-section.active {
             display: block;
         }
@@ -147,11 +144,11 @@
         <main class="p-6 flex-1 overflow-y-auto">
             <!-- My Webshop Section (default view) -->
             <div id="my-webshop-section" class="content-section active">
-                <h2 class="text-2xl font-bold text-gray-800 mb-6">MY PRODUCTS</h2>
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-4 border-gray-200">MY PRODUCTS</h2>
 
                 <div class="flex justify-end space-x-4 mb-6">
-                    <button class="bg-[#A1CD38] text-[#1E1E1E] px-6 py-2 rounded-lg font-semibold hover:bg-[#3C8235]/90">ADD CATEGORY</button>
-                    <button class="bg-[#112E2C] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#286623]/90">ADD PRODUCTS</button>
+                    <button id="open-add-category-modal" class="bg-[#A1CD38] text-[#1E1E1E] px-6 py-2 rounded-lg font-semibold shadow-md hover:bg-[#8CB82F] transition-colors duration-200">ADD CATEGORY</button>
+                    <button id="open-add-product-modal" class="bg-[#112E2C] text-white px-6 py-2 rounded-lg font-semibold shadow-md hover:bg-[#0A1F1E] transition-colors duration-200">ADD PRODUCTS</button>
                 </div>
 
                 <!-- Product Categories Table -->
@@ -329,6 +326,86 @@
                             </tbody>
                         </table>
                     </div>
+                </div>
+            </div>
+
+            <!-- Add Category Modal -->
+            <div id="add-category-modal" class="fixed inset-0 bg-gray-900 bg-opacity-70 flex items-center justify-center z-50 hidden opacity-0 transition-opacity duration-300 ease-in-out">
+                <div class="bg-white p-8 rounded-lg shadow-2xl w-full max-w-md transform scale-90 transition-transform duration-300 ease-in-out border border-gray-200">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-4 border-gray-200">Add New Category</h3>
+                    <form id="add-category-form">
+                        <div class="mb-4">
+                            <label for="categoryName" class="block text-sm font-medium text-gray-700 mb-1">Category Name</label>
+                            <input type="text" id="categoryName" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 sm:text-sm" placeholder="e.g., Healthy Products">
+                        </div>
+                        <div class="mb-4">
+                            <label for="categoryDescription" class="block text-sm font-medium text-gray-700 mb-1">Description</label>
+                            <textarea id="categoryDescription" rows="3" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 sm:text-sm" placeholder="A brief description of the category..."></textarea>
+                        </div>
+                        <div class="mb-4">
+                            <label for="categoryTags" class="block text-sm font-medium text-gray-700 mb-1">Tags (comma-separated)</label>
+                            <input type="text" id="categoryTags" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 sm:text-sm" placeholder="e.g., organic, wellness, food">
+                        </div>
+                        <div class="mb-6">
+                            <label for="categoryImage" class="block text-sm font-medium text-gray-700 mb-1">Category Image</label>
+                            <input type="file" id="categoryImage" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-green-50 file:text-green-700 hover:file:bg-green-100">
+                        </div>
+                        <div class="flex justify-end space-x-3 pt-4 border-t border-gray-200">
+                            <button type="button" id="cancel-add-category-modal" class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold shadow-sm hover:bg-gray-300 transition-colors duration-200">Cancel</button>
+                            <button type="submit" class="px-6 py-2 bg-[#286623] text-white rounded-lg font-semibold shadow-md hover:bg-[#1E4E1C] transition-colors duration-200">Add Category</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Add Product Modal -->
+            <div id="add-product-modal" class="fixed inset-0 bg-gray-900 bg-opacity-70 flex items-center justify-center z-50 hidden opacity-0 transition-opacity duration-300 ease-in-out">
+                <div class="bg-white p-8 rounded-lg shadow-2xl w-full max-w-md transform scale-90 transition-transform duration-300 ease-in-out border border-gray-200">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-4 border-gray-200">Add New Product</h3>
+                    <form id="add-product-form">
+                        <div class="mb-4">
+                            <label for="productName" class="block text-sm font-medium text-gray-700 mb-1">Product Name</label>
+                            <input type="text" id="productName" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 sm:text-sm" placeholder="e.g., Organic Coffee Beans">
+                        </div>
+                        <div class="mb-4">
+                            <label for="productCategory" class="block text-sm font-medium text-gray-700 mb-1">Category</label>
+                            <select id="productCategory" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 sm:text-sm">
+                                <option value="">Select a category</option>
+                                <option value="healthy-products">Healthy Products</option>
+                                <option value="beverages">Beverages</option>
+                                <option value="snacks">Snacks</option>
+                            </select>
+
+                        </div>
+                        <div class="mb-4">
+                            <label for="productType" class="block text-sm font-medium text-gray-700 mb-1">Type</label>
+                            <select id="productType" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 sm:text-sm">
+                                <option value="">Select product type</option>
+                                <option value="simple">Simple</option>
+                                <option value="variable">Variable</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="productPriceUSD" class="block text-sm font-medium text-gray-700 mb-1">Price (USD)</label>
+                            <input type="number" id="productPriceUSD" step="0.01" min="0" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 sm:text-sm" placeholder="e.g., 15.99">
+                        </div>
+                        <div class="mb-4">
+                            <label for="productStock" class="block text-sm font-medium text-gray-700 mb-1">Stock Quantity</label>
+                            <input type="number" id="productStock" min="0" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 sm:text-sm" placeholder="e.g., 100">
+                        </div>
+                        <div class="mb-4">
+                            <label for="productDescription" class="block text-sm font-medium text-gray-700 mb-1">Description</label>
+                            <textarea id="productDescription" rows="3" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 sm:text-sm" placeholder="Detailed product description..."></textarea>
+                        </div>
+                        <div class="mb-6">
+                            <label for="productImage" class="block text-sm font-medium text-gray-700 mb-1">Product Image</label>
+                            <input type="file" id="productImage" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-green-50 file:text-green-700 hover:file:bg-green-100">
+                        </div>
+                        <div class="flex justify-end space-x-3 pt-4 border-t border-gray-200">
+                            <button type="button" id="cancel-add-product-modal" class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold shadow-sm hover:bg-gray-300 transition-colors duration-200">Cancel</button>
+                            <button type="submit" class="px-6 py-2 bg-[#286623] text-white rounded-lg font-semibold shadow-md hover:bg-[#1E4E1C] transition-colors duration-200">Add Product</button>
+                        </div>
+                    </form>
                 </div>
             </div>
 
@@ -664,18 +741,14 @@
             <!-- What's New? Section -->
             <div id="whats-new-section" class="content-section p-6 bg-white rounded-lg shadow-md mb-8">
                 <h2 class="text-2xl font-bold text-gray-800 mb-4">Latest Updates</h2>
-                <p class="text-gray-600">Discover new features, announcements, and platform improvements.</p>
-                <!-- Add "What's New" content here -->
             </div>
 
             <!-- Settings Section -->
             <div id="settings-section" class="content-section p-6 bg-white rounded-lg shadow-md mb-8">
                 <h2 class="text-2xl font-bold text-gray-800 mb-4">Account Settings</h2>
-                <p class="text-gray-600">Configure your profile, preferences, and security settings.</p>
-                <!-- Add settings forms/options here -->
             </div>
 
-                        <!-- Profile Section -->
+            <!-- Profile Section -->
             <div id="profile-section" class="content-section p-6 bg-white rounded-lg shadow-md mb-8">
                 <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-4 border-gray-200">Your Profile Information</h2>
 
@@ -807,6 +880,117 @@
             if (initialNavLink) {
                 showSection('#my-webshop-section');
                 setActiveNavLink(initialNavLink);
+            }
+        });
+    </script>
+
+    <!-- Overview section js -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add Category Modal Elements
+            const openAddCategoryModalBtn = document.getElementById('open-add-category-modal');
+            const addCategoryModal = document.getElementById('add-category-modal');
+            const cancelAddCategoryModalBtn = document.getElementById('cancel-add-category-modal');
+            const addCategoryForm = document.getElementById('add-category-form');
+
+            // Add Product Modal Elements
+            const openAddProductModalBtn = document.getElementById('open-add-product-modal');
+            const addProductModal = document.getElementById('add-product-modal');
+            const cancelAddProductModalBtn = document.getElementById('cancel-add-product-modal');
+            const addProductForm = document.getElementById('add-product-form');
+
+            // Function to open a generic modal
+            const openGenericModal = (modalElement) => {
+                modalElement.classList.remove('hidden');
+                void modalElement.offsetWidth; // Trigger reflow
+                modalElement.classList.remove('opacity-0', 'scale-90');
+                modalElement.classList.add('opacity-100', 'scale-100');
+            };
+
+            // Function to close a generic modal
+            const closeGenericModal = (modalElement) => {
+                modalElement.classList.remove('opacity-100', 'scale-100');
+                modalElement.classList.add('opacity-0', 'scale-90');
+                setTimeout(() => {
+                    modalElement.classList.add('hidden');
+                    // Reset form fields after closing
+                    if (modalElement.querySelector('form')) {
+                        modalElement.querySelector('form').reset();
+                    }
+                }, 300); // Match transition duration
+            };
+
+            // Event Listeners for Add Category Modal
+            if (openAddCategoryModalBtn) {
+                openAddCategoryModalBtn.addEventListener('click', () => openGenericModal(addCategoryModal));
+            }
+            if (cancelAddCategoryModalBtn) {
+                cancelAddCategoryModalBtn.addEventListener('click', () => closeGenericModal(addCategoryModal));
+            }
+            if (addCategoryModal) {
+                addCategoryModal.addEventListener('click', (e) => {
+                    if (e.target === addCategoryModal) {
+                        closeGenericModal(addCategoryModal);
+                    }
+                });
+            }
+            if (addCategoryForm) {
+                addCategoryForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const categoryData = {
+                        name: document.getElementById('categoryName').value,
+                        description: document.getElementById('categoryDescription').value,
+                        tags: document.getElementById('categoryTags').value.split(',').map(tag => tag.trim()),
+                        // For image, you'd handle file upload here
+                        imageFile: document.getElementById('categoryImage').files[0]
+                    };
+                    console.log("New Category Data:", categoryData);
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Category Added!',
+                        text: 'Your new product category has been added.',
+                        confirmButtonColor: '#3C8235'
+                    });
+                    closeGenericModal(addCategoryModal);
+                });
+            }
+
+            // Event Listeners for Add Product Modal
+            if (openAddProductModalBtn) {
+                openAddProductModalBtn.addEventListener('click', () => openGenericModal(addProductModal));
+            }
+            if (cancelAddProductModalBtn) {
+                cancelAddProductModalBtn.addEventListener('click', () => closeGenericModal(addProductModal));
+            }
+            if (addProductModal) {
+                addProductModal.addEventListener('click', (e) => {
+                    if (e.target === addProductModal) {
+                        closeGenericModal(addProductModal);
+                    }
+                });
+            }
+            if (addProductForm) {
+                addProductForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const productData = {
+                        name: document.getElementById('productName').value,
+                        category: document.getElementById('productCategory').value,
+                        type: document.getElementById('productType').value,
+                        priceUSD: parseFloat(document.getElementById('productPriceUSD').value),
+                        stock: parseInt(document.getElementById('productStock').value),
+                        description: document.getElementById('productDescription').value,
+                        // For image, you'd handle file upload here
+                        imageFile: document.getElementById('productImage').files[0]
+                    };
+                    console.log("New Product Data:", productData);
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Product Added!',
+                        text: 'Your new product has been added.',
+                        confirmButtonColor: '#3C8235'
+                    });
+                    closeGenericModal(addProductModal);
+                });
             }
         });
     </script>
