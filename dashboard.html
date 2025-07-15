@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DAC Dashboard</title>
+
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="Assets/images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Assets/images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Assets/images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="Assets/images/favicon_io/site.webmanifest">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -139,8 +147,8 @@
                 <h2 class="text-2xl font-bold text-gray-800 mb-6">MY PRODUCTS</h2>
 
                 <div class="flex justify-end space-x-4 mb-6">
-                    <button class="bg-[#3C8235] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#3C8235]/90">ADD CATEGORY</button>
-                    <button class="bg-[#286623] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#286623]/90">ADD PRODUCTS</button>
+                    <button class="bg-[#A1CD38] text-[#1E1E1E] px-6 py-2 rounded-lg font-semibold hover:bg-[#3C8235]/90">ADD CATEGORY</button>
+                    <button class="bg-[#112E2C] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#286623]/90">ADD PRODUCTS</button>
                 </div>
 
                 <!-- Product Categories Table -->
@@ -199,7 +207,7 @@
                                         </a>
                                     </td>
                                 </tr>
-                                <!-- Add more category rows as needed based on the design -->
+                                <!-- TODO: more products tutateka hapa -->
                             </tbody>
                         </table>
                     </div>
@@ -330,17 +338,246 @@
 
             <!-- Templates Section -->
             <div id="templates-section" class="content-section p-6 bg-white rounded-lg shadow-md mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">Templates Management</h2>
-                <p class="text-gray-600">Manage your product templates and design layouts here.</p>
-                <!-- Add template management content here -->
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Shop Templates Management</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Template Card 1 -->
+                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 shadow-lg flex flex-col items-center text-center">
+                        <img src="Assets/images/coffee_web.jpg" alt="Template 1 Preview" class="w-full h-48 object-cover rounded-md mb-4">
+                        
+                        <div class="flex space-x-3 w-full">
+                            <button class="flex-1 bg-[#A1CD38] text-[#1E1E1E] px-4 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity">PREVIEW</button>
+                            <button class="flex-1 bg-[#112E2C] text-white px-2 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity">SELECT TEMPLATE</button>
+                        </div>
+                    </div>
+
+                    <!-- Template Card 2 -->
+                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 shadow-lg flex flex-col items-center text-center">
+                        <img src="Assets/images/agribiz.jpg" alt="Template 2 Preview" class="w-full h-48 object-cover rounded-md mb-4">
+                        
+                        <div class="flex space-x-3 w-full">
+                            <button class="flex-1 bg-[#A1CD38] text-[#1E1E1E] px-4 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity">PREVIEW</button>
+                            <button class="flex-1 bg-[#112E2C] text-white px-2 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity">SELECT TEMPLATE</button>
+                        </div>
+                    </div>
+
+                    <!-- Template Card 3 -->
+                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 shadow-lg flex flex-col items-center text-center">
+                        <img src="Assets/images/flowers.jpg" alt="Template 3 Preview" class="w-full h-48 object-cover rounded-md mb-4">
+                        
+                        <div class="flex space-x-3 w-full">
+                            <button class="flex-1 bg-[#A1CD38] text-[#1E1E1E] px-4 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity">PREVIEW</button>
+                            <button class="flex-1 bg-[#112E2C] text-white px-2 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity">SELECT TEMPLATE</button>
+                        </div>
+                    </div>
+
+                    <!-- Template Card 4 -->
+                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 shadow-lg flex flex-col items-center text-center">
+                        <img src="Assets/images/milk.jpg" alt="Template 4 Preview" class="w-full h-48 object-cover rounded-md mb-4">
+                        
+                        <div class="flex space-x-3 w-full">
+                            <button class="flex-1 bg-[#A1CD38] text-[#1E1E1E] px-4 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity">PREVIEW</button>
+                            <button class="flex-1 bg-[#112E2C] text-white px-2 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity">SELECT TEMPLATE</button>
+                        </div>
+                    </div>
+
+                    <!-- Template Card 5 -->
+                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 shadow-lg flex flex-col items-center text-center">
+                        <img src="Assets/images/vegetables.jpg" alt="Template 5 Preview" class="w-full h-48 object-cover rounded-md mb-4">
+                        
+                        <div class="flex space-x-3 w-full">
+                            <button class="flex-1 bg-[#A1CD38] text-[#1E1E1E] px-4 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity">PREVIEW</button>
+                            <button class="flex-1 bg-[#112E2C] text-white px-2 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity">SELECT TEMPLATE</button>
+                        </div>
+                    </div>
+
+                    <!-- Template Card 6 -->
+                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 shadow-lg flex flex-col items-center text-center">
+                        <img src="Assets/images/nuts.jpg" alt="Template 6 Preview" class="w-full h-48 object-cover rounded-md mb-4">
+                        
+                        <div class="flex space-x-3 w-full">
+                            <button class="flex-1 bg-[#A1CD38] text-[#1E1E1E] px-4 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity">PREVIEW</button>
+                            <button class="flex-1 bg-[#112E2C] text-white px-2 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity">SELECT TEMPLATE</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- Communication Section -->
+                        <!-- Communication Section -->
             <div id="communication-section" class="content-section p-6 bg-white rounded-lg shadow-md mb-8">
                 <h2 class="text-2xl font-bold text-gray-800 mb-4">Communication Hub</h2>
-                <p class="text-gray-600">Handle messages, notifications, and customer interactions.</p>
-                <!-- Add communication features here -->
+
+                <!-- Tab Navigation -->
+                <div class="flex border-b border-gray-200 mb-6">
+                    <button id="mail-tab" class="tab-button px-4 py-2 text-sm font-bold text-gray-700 border-b-2 border-transparent  focus:outline-none active-tab bg-green-700 text-white rounded-t-lg">Mail Inbox</button>
+                    <button id="notifications-tab" class="tab-button px-4 py-2 text-sm font-bold text-gray-700 border-b-2 border-transparent  focus:outline-none rounded-t-lg">Notifications</button>
+                    <button id="activity-tab" class="tab-button px-4 py-2 text-sm font-bold text-gray-700 border-b-2 border-transparent  focus:outline-none rounded-t-lg">User Activity</button>
+                </div>
+
+                <!-- Mail Inbox Content -->
+                <div id="mail-content" class="tab-content active p-4 border border-gray-200 rounded-lg">
+                    <h3 class="text-xl font-bold text-gray-700 mb-4">Mail Inbox</h3>
+                    <div class="space-y-4">
+                        <!-- Mail Item 1 -->
+                        <div class="flex items-start p-3 bg-gray-50 rounded-md shadow-sm hover:bg-gray-100 cursor-pointer">
+                            <div class="flex-shrink-0 mr-3">
+                                <img class="h-8 w-8 rounded-full" src="https://placehold.co/32x32/E0E7FF/4338CA?text=U1" alt="User Avatar">
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-semibold text-gray-900">Support Team</span>
+                                    <span class="text-xs text-gray-500">2 hours ago</span>
+                                </div>
+                                <p class="text-sm font-medium text-gray-800">New inquiry about product features</p>
+                                <p class="text-sm text-gray-600 truncate">"Hi, I had a question regarding the new features in your latest update..."</p>
+                            </div>
+                        </div>
+                        <!-- Mail Item 2 -->
+                        <div class="flex items-start p-3 bg-gray-50 rounded-md shadow-sm hover:bg-gray-100 cursor-pointer">
+                            <div class="flex-shrink-0 mr-3">
+                                <img class="h-8 w-8 rounded-full" src="https://placehold.co/32x32/D1FAE5/065F46?text=U2" alt="User Avatar">
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-semibold text-gray-900">Marketing Updates</span>
+                                    <span class="text-xs text-gray-500">Yesterday</span>
+                                </div>
+                                <p class="text-sm font-medium text-gray-800">Your weekly marketing report is ready</p>
+                                <p class="text-sm text-gray-600 truncate">"Check out your performance metrics and new campaign suggestions..."</p>
+                            </div>
+                        </div>
+                        <!-- Mail Item 3 -->
+                        <div class="flex items-start p-3 bg-gray-50 rounded-md shadow-sm hover:bg-gray-100 cursor-pointer">
+                            <div class="flex-shrink-0 mr-3">
+                                <img class="h-8 w-8 rounded-full" src="https://placehold.co/32x32/FFFBEB/9A3412?text=U3" alt="User Avatar">
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-semibold text-gray-900">Order #1023 Confirmed</span>
+                                    <span class="text-xs text-gray-500">3 days ago</span>
+                                </div>
+                                <p class="text-sm font-medium text-gray-800">Your recent order has been processed</p>
+                                <p class="text-sm text-gray-600 truncate">"Thank you for your purchase! Your items will be shipped soon..."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notifications Content -->
+                <div id="notifications-content" class="tab-content p-4 border border-gray-200 rounded-lg" style="display:none;">
+                    <h3 class="text-xl font-bold text-gray-700 mb-4">Notifications</h3>
+                    <div class="space-y-4">
+                        <!-- Notification Item 1 -->
+                        <div class="flex items-center p-3 bg-gray-50 rounded-md shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm font-medium text-gray-800">New product "Organic Honey" added to your webshop.</p>
+                                <span class="text-xs text-gray-500">10 minutes ago</span>
+                            </div>
+                        </div>
+                        <!-- Notification Item 2 -->
+                        <div class="flex items-center p-3 bg-gray-50 rounded-md shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm font-medium text-gray-800">Low stock alert: "Wimbi Mix" has only 5 items left.</p>
+                                <span class="text-xs text-gray-500">1 hour ago</span>
+                            </div>
+                        </div>
+                        <!-- Notification Item 3 -->
+                        <div class="flex items-center p-3 bg-gray-50 rounded-md shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm font-medium text-gray-800">Your payout of KES 15,000 has been processed.</p>
+                                <span class="text-xs text-gray-500">2 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- User Activity Content -->
+                <div id="activity-content" class="tab-content p-4 border border-gray-200 rounded-lg" style="display:none;">
+                    <h3 class="text-xl font-bold text-gray-700 mb-4">User Activity</h3>
+                    <div class="space-y-4">
+                        <!-- Activity Item 1 -->
+                        <div class="flex items-center p-3 bg-gray-50 rounded-md shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm font-medium text-gray-800">User <span class="font-bold">@JaneDoe</span> added "Organic Coffee" to cart but did not purchase.</p>
+                                <span class="text-xs text-gray-500">5 minutes ago</span>
+                            </div>
+                        </div>
+                        <!-- Activity Item 2 -->
+                        <div class="flex items-center p-3 bg-gray-50 rounded-md shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm font-medium text-gray-800">User <span class="font-bold">@JohnSmith</span> spent 3 minutes on "Healthy Products" category page.</p>
+                                <span class="text-xs text-gray-500">30 minutes ago</span>
+                            </div>
+                        </div>
+                        <!-- Activity Item 3 -->
+                        <div class="flex items-center p-3 bg-gray-50 rounded-md shadow-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z" />
+                            </svg>
+                            <div class="flex-1">
+                                <p class="text-sm font-medium text-gray-800">New user <span class="font-bold">@NewShopper</span> signed up.</p>
+                                <span class="text-xs text-gray-500">1 hour ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const tabButtons = document.querySelectorAll('.tab-button');
+                    const tabContents = document.querySelectorAll('.tab-content');
+
+                    // Function to show a specific tab content and hide others
+                    const showTabContent = (targetId) => {
+                        tabContents.forEach(content => {
+                            content.style.display = 'none'; // Hide all
+                        });
+                        document.getElementById(targetId).style.display = 'block'; // Show target
+                    };
+
+                    // Function to set active tab button style
+                    const setActiveTabButton = (clickedButton) => {
+                        tabButtons.forEach(button => {
+                            button.classList.remove('bg-green-700', 'text-white');
+                            button.classList.add('bg-gray-200', 'text-gray-700');
+                        });
+                        clickedButton.classList.remove('bg-gray-200', 'text-gray-700');
+                        clickedButton.classList.add('bg-green-700', 'text-white');
+                    };
+
+                    // Add click listeners to tab buttons
+                    tabButtons.forEach(button => {
+                        button.addEventListener('click', () => {
+                            const targetId = button.id.replace('-tab', '-content'); // e.g., 'mail-tab' -> 'mail-content'
+                            showTabContent(targetId);
+                            setActiveTabButton(button);
+                        });
+                    });
+
+                    // Initialize: Show Mail Inbox by default
+                    const initialTabButton = document.getElementById('mail-tab');
+                    if (initialTabButton) {
+                        showTabContent('mail-content');
+                        setActiveTabButton(initialTabButton);
+                    }
+                });
+            </script>
+
 
             <!-- What's New? Section -->
             <div id="whats-new-section" class="content-section p-6 bg-white rounded-lg shadow-md mb-8">
