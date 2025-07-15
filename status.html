@@ -59,7 +59,7 @@
 
     <main class="container mx-auto px-4 py-12 flex flex-col items-center justify-center min-h-[calc(100vh-80px)]">
     <div x-data="{
-        approvalStatus: 'Rejected', // FIXME: HAPA AM SETTING THIS VARIABLE DEPENDING OF WHAT COMING FROM THE BACKEND, EITHER {{APPROVED, PROCESSING, REJECTED}}
+        approvalStatus: 'Approved', // FIXME: HAPA AM SETTING THIS VARIABLE DEPENDING OF WHAT COMING FROM THE BACKEND, EITHER {{APPROVED, PROCESSING, REJECTED}}
 
         getStatusColor() {
             if (this.approvalStatus === 'Approved') {
