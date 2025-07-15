@@ -79,28 +79,26 @@
                         Communication
                     </a>
                 </li>
-                <li class="mb-4">
-                    <!-- Link to What's New section -->
+                <!-- <li class="mb-4">
                     <a href="#whats-new-section" class="nav-link flex items-center p-3 rounded-lg hover:bg-[#3C8235]">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" viewBox="0 0 20 20" fill="currentColor">
                             <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
                         </svg>
                         What's New?
                     </a>
-                </li>
+                </li> -->
             </ul>
         </nav>
 
         <ul class="mt-auto">
-            <li class="mb-4">
-                <!-- Link to Settings section -->
+            <!-- <li class="mb-4">
                 <a href="#settings-section" class="nav-link flex items-center p-3 rounded-lg hover:bg-[#3C8235]">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.16-1.54-1.16-1.92 0L2.26 12.01c-.42 1.28.61 2.37 1.91 2.37h12.63c1.3 0 2.33-1.09 1.91-2.37l-7.3-8.84zM12 15a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd" />
                     </svg>
                     Settings
                 </a>
-            </li>
+            </li> -->
             <li class="mb-4">
                 <!-- Link to Profile section -->
                 <a href="#profile-section" class="nav-link flex items-center p-3 rounded-lg hover:bg-[#3C8235]">
@@ -336,10 +334,131 @@
 
             <!-- Analytics Section -->
             <div id="analytics-section" class="content-section p-6 bg-white rounded-lg shadow-md mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">Analytics Dashboard</h2>
-                <p class="text-gray-600">This section will display your sales, traffic, and other key performance indicators.</p>
-                <!-- Add analytics charts/widgets here -->
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-4 border-gray-200">Webshop Analytics Dashboard</h2>
+
+                <!-- KPI Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <!-- Total Sales Card -->
+                    <div class="bg-blue-50 p-6 rounded-lg shadow-sm border border-blue-200 flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-blue-700">Total Sales</p>
+                            <p class="text-3xl font-bold text-blue-900 mt-1">KES 125,000</p>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+
+                    <!-- Total Orders Card -->
+                    <div class="bg-green-50 p-6 rounded-lg shadow-sm border border-green-200 flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-green-700">Total Orders</p>
+                            <p class="text-3xl font-bold text-green-900 mt-1">450</p>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                        </svg>
+                    </div>
+
+                    <!-- Unique Visitors Card -->
+                    <div class="bg-yellow-50 p-6 rounded-lg shadow-sm border border-yellow-200 flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-yellow-700">Unique Visitors</p>
+                            <p class="text-3xl font-bold text-yellow-900 mt-1">12,345</p>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H2v-2a3 3 0 015.356-1.857M17 20v-2c0-.18-.01-.36-.02-.538A2.995 2.995 0 0118 14c0-.474-.06-.93-.172-1.365M16.5 8a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM9 11A6 6 0 013 17v2h6m-6-6a6 6 0 016-6v6H6z" />
+                        </svg>
+                    </div>
+
+                    <!-- Conversion Rate Card -->
+                    <div class="bg-purple-50 p-6 rounded-lg shadow-sm border border-purple-200 flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-purple-700">Conversion Rate</p>
+                            <p class="text-3xl font-bold text-purple-900 mt-1">3.2%</p>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7 12l3-3m0 0l3 3m-3-3v4.586A2.001 2.001 0 0112 12V6a2 2 0 012-2h0a2 2 0 012 2v6a2 2 0 01-2 2h-4a2 2 0 01-2-2zM4 17h16" />
+                        </svg>
+                    </div>
+                </div>
+
+                
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Top Products Section -->
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                        <h3 class="text-xl font-semibold text-gray-700 mb-4">Top Selling Products</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center justify-between p-3 bg-gray-50 rounded-md shadow-sm">
+                                <div class="flex items-center">
+                                    <img src="Assets/images/coffee.jpg" alt="Product 1" class="w-10 h-10 rounded-full object-cover mr-3">
+                                    <span class="font-medium text-gray-800">Wimbi Mix</span>
+                                </div>
+                                <span class="text-green-600 font-semibold">120 units</span>
+                            </li>
+                            <li class="flex items-center justify-between p-3 bg-gray-50 rounded-md shadow-sm">
+                                <div class="flex items-center">
+                                    <img src="Assets/images/coffee.jpg" alt="Product 2" class="w-10 h-10 rounded-full object-cover mr-3">
+                                    <span class="font-medium text-gray-800">Soulenkraut</span>
+                                </div>
+                                <span class="text-green-600 font-semibold">95 units</span>
+                            </li>
+                            <li class="flex items-center justify-between p-3 bg-gray-50 rounded-md shadow-sm">
+                                <div class="flex items-center">
+                                    <img src="Assets/images/coffee.jpg" alt="Product 3" class="w-10 h-10 rounded-full object-cover mr-3">
+                                    <span class="font-medium text-gray-800">Organic Honey</span>
+                                </div>
+                                <span class="text-green-600 font-semibold">80 units</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Traffic Sources Section -->
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+                        <h3 class="text-xl font-semibold text-gray-700 mb-4">Traffic Sources</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center justify-between p-3 bg-gray-50 rounded-md shadow-sm">
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 112 0v1m-4 0a2 2 0 100 4m-8-4v8a2 2 0 002 2h8a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2z" />
+                                    </svg>
+                                    <span class="font-medium text-gray-800">Direct</span>
+                                </div>
+                                <span class="text-gray-600">40%</span>
+                            </li>
+                            <li class="flex items-center justify-between p-3 bg-gray-50 rounded-md shadow-sm">
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                    <span class="font-medium text-gray-800">Referral</span>
+                                </div>
+                                <span class="text-gray-600">25%</span>
+                            </li>
+                            <li class="flex items-center justify-between p-3 bg-gray-50 rounded-md shadow-sm">
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                    </svg>
+                                    <span class="font-medium text-gray-800">Search Engine</span>
+                                </div>
+                                <span class="text-gray-600">20%</span>
+                            </li>
+                            <li class="flex items-center justify-between p-3 bg-gray-50 rounded-md shadow-sm">
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M7 8h10M7 12h10M7 16h10M4 6h16a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2z" />
+                                    </svg>
+                                    <span class="font-medium text-gray-800">Social Media</span>
+                                </div>
+                                <span class="text-gray-600">15%</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+
 
             <!-- Templates Section -->
             <div id="templates-section" class="content-section p-6 bg-white rounded-lg shadow-md mb-8">
@@ -407,7 +526,7 @@
                 </div>
             </div>
 
-                        <!-- Communication Section -->
+            <!-- Communication Section -->
             <div id="communication-section" class="content-section p-6 bg-white rounded-lg shadow-md mb-8">
                 <h2 class="text-2xl font-bold text-gray-800 mb-4">Communication Hub</h2>
 
@@ -542,9 +661,6 @@
                 </div>
             </div>
 
-            
-
-
             <!-- What's New? Section -->
             <div id="whats-new-section" class="content-section p-6 bg-white rounded-lg shadow-md mb-8">
                 <h2 class="text-2xl font-bold text-gray-800 mb-4">Latest Updates</h2>
@@ -559,13 +675,81 @@
                 <!-- Add settings forms/options here -->
             </div>
 
-            <!-- Profile Section -->
+                        <!-- Profile Section -->
             <div id="profile-section" class="content-section p-6 bg-white rounded-lg shadow-md mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">User Profile</h2>
-                <p class="text-gray-600">View and edit your personal information.</p>
-                <!-- Add profile details here -->
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-4 border-gray-200">Your Profile Information</h2>
+
+                <div class="flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-10 py-4">
+                    <!-- Profile Picture Section -->
+                    <div class="flex flex-col items-center">
+                        <img id="profile-pic" src="Assets/images/profile_svg.svg" alt="User Profile Picture" class="w-36 h-36 rounded-full object-cover border-4 border-[#112E2C] shadow-lg mb-4 hover:shadow-xl transition-shadow duration-300">
+                        <button class="bg-[#112E2C] text-[#ffffff] px-5 py-2 rounded-full font-semibold text-sm shadow-md hover:bg-[#8CB82F] transition-colors duration-200">Upload New Image</button>
+                    </div>
+
+                    <!-- Profile Details Display -->
+                    <div class="flex-1 w-full">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 mb-6">
+                            <!-- Full Name -->
+                            <div>
+                                <label for="displayFullName" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                <input type="text" id="displayFullName" value="John Doe" readonly class="block w-full px-4 py-2 border border-gray-200 rounded-md shadow-sm sm:text-base bg-gray-50 text-gray-800 cursor-default focus:outline-none">
+                            </div>
+                            <!-- Email Address -->
+                            <div>
+                                <label for="displayEmail" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                <input type="email" id="displayEmail" value="john.doe@example.com" readonly class="block w-full px-4 py-2 border border-gray-200 rounded-md shadow-sm sm:text-base bg-gray-50 text-gray-800 cursor-default focus:outline-none">
+                            </div>
+                            <!-- Phone Number -->
+                            <div>
+                                <label for="displayPhone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                <input type="tel" id="displayPhone" value="+254 712 345 678" readonly class="block w-full px-4 py-2 border border-gray-200 rounded-md shadow-sm sm:text-base bg-gray-50 text-gray-800 cursor-default focus:outline-none">
+                            </div>
+                            <!-- Address -->
+                            <div>
+                                <label for="displayAddress" class="block text-sm font-medium text-gray-700 mb-1">Address</label>
+                                <input type="text" id="displayAddress" value="123 Main St, Nairobi, Kenya" readonly class="block w-full px-4 py-2 border border-gray-200 rounded-md shadow-sm sm:text-base bg-gray-50 text-gray-800 cursor-default focus:outline-none">
+                            </div>
+                            <!-- Joining Date -->
+                            <div>
+                                <label for="displayJoiningDate" class="block text-sm font-medium text-gray-700 mb-1">Member Since</label>
+                                <input type="text" id="displayJoiningDate" value="January 15, 2023" readonly class="block w-full px-4 py-2 border border-gray-200 rounded-md shadow-sm sm:text-base bg-gray-50 text-gray-800 cursor-default focus:outline-none">
+                            </div>
+                        </div>
+
+                        <!-- Edit Profile Button - Opens Modal -->
+                        <button id="open-edit-modal" class="bg-[#286623] text-white px-8 py-3 rounded-lg font-semibold shadow-md hover:bg-[#1E4E1C] transition-colors duration-200">Edit Profile</button>
+                    </div>
+                </div>
             </div>
 
+            <!--  Profile Modal -->
+            <div id="edit-profile-modal" class="fixed inset-0 bg-gray-900 bg-opacity-70 flex items-center justify-center z-50 hidden opacity-0 transition-opacity duration-300 ease-in-out">
+                <div class="bg-white p-8 rounded-lg shadow-2xl w-full max-w-md transform scale-90 transition-transform duration-300 ease-in-out border border-gray-200">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-4 border-gray-200">Edit Profile Details</h3>
+                    <form id="edit-profile-form">
+                        <div class="mb-4">
+                            <label for="editFullName" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                            <input type="text" id="editFullName" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 sm:text-sm">
+                        </div>
+                        <div class="mb-4">
+                            <label for="editEmail" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <input type="email" id="editEmail" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 sm:text-sm">
+                        </div>
+                        <div class="mb-4">
+                            <label for="editPhone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                            <input type="tel" id="editPhone" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 sm:text-sm">
+                        </div>
+                        <div class="mb-6">
+                            <label for="editAddress" class="block text-sm font-medium text-gray-700 mb-1">Address</label>
+                            <input type="text" id="editAddress" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 sm:text-sm">
+                        </div>
+                        <div class="flex justify-end space-x-3 pt-4 border-t border-gray-200">
+                            <button type="button" id="cancel-edit-modal" class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold shadow-sm hover:bg-gray-300 transition-colors duration-200">Cancel</button>
+                            <button type="submit" class="px-6 py-2 bg-[#286623] text-white rounded-lg font-semibold shadow-md hover:bg-[#1E4E1C] transition-colors duration-200">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </main>
     </div>
 
@@ -702,6 +886,104 @@
                             });
                         }
                     });
+                });
+            }
+        });
+    </script>
+
+    <!-- Profile js -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Profile Modal Elements
+            const openEditModalBtn = document.getElementById('open-edit-modal');
+            const editProfileModal = document.getElementById('edit-profile-modal');
+            const cancelEditModalBtn = document.getElementById('cancel-edit-modal');
+            const editProfileForm = document.getElementById('edit-profile-form');
+
+            // Display fields
+            const displayFullName = document.getElementById('displayFullName');
+            const displayEmail = document.getElementById('displayEmail');
+            const displayPhone = document.getElementById('displayPhone');
+            const displayAddress = document.getElementById('displayAddress');
+            const profilePic = document.getElementById('profile-pic'); // For future image updates
+
+            // Modal input fields
+            const editFullName = document.getElementById('editFullName');
+            const editEmail = document.getElementById('editEmail');
+            const editPhone = document.getElementById('editPhone');
+            const editAddress = document.getElementById('editAddress');
+
+            // Function to open the modal
+            const openModal = () => {
+                // Populate modal fields with current display values
+                editFullName.value = displayFullName.value;
+                editEmail.value = displayEmail.value;
+                editPhone.value = displayPhone.value;
+                editAddress.value = displayAddress.value;
+
+                editProfileModal.classList.remove('hidden');
+                // Trigger reflow to ensure transition plays
+                void editProfileModal.offsetWidth; 
+                editProfileModal.classList.remove('opacity-0', 'scale-90');
+                editProfileModal.classList.add('opacity-100', 'scale-100');
+            };
+
+            // Function to close the modal
+            const closeModal = () => {
+                editProfileModal.classList.remove('opacity-100', 'scale-100');
+                editProfileModal.classList.add('opacity-0', 'scale-90');
+                setTimeout(() => {
+                    editProfileModal.classList.add('hidden');
+                }, 300); // Match transition duration
+            };
+
+            // Event listener to open modal
+            if (openEditModalBtn) {
+                openEditModalBtn.addEventListener('click', openModal);
+            }
+
+            // Event listener to close modal via Cancel button
+            if (cancelEditModalBtn) {
+                cancelEditModalBtn.addEventListener('click', closeModal);
+            }
+
+            // Event listener to close modal by clicking outside (on overlay)
+            if (editProfileModal) {
+                editProfileModal.addEventListener('click', (e) => {
+                    if (e.target === editProfileModal) { // Only close if clicking the direct overlay
+                        closeModal();
+                    }
+                });
+            }
+
+            // Event listener for form submission inside the modal
+            if (editProfileForm) {
+                editProfileForm.addEventListener('submit', (e) => {
+                    e.preventDefault(); // Prevent default form submission
+
+                    // Update the displayed profile details
+                    displayFullName.value = editFullName.value;
+                    displayEmail.value = editEmail.value;
+                    displayPhone.value = editPhone.value;
+                    displayAddress.value = editAddress.value;
+
+                    // In a real application, you would send this data to your backend
+                    console.log("Updated Profile Data:", {
+                        fullName: editFullName.value,
+                        email: editEmail.value,
+                        phone: editPhone.value,
+                        address: editAddress.value
+                    });
+
+                    // Optionally, show a success message using SweetAlert2
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Profile Updated!',
+                        text: 'Your profile details have been successfully saved.',
+                        confirmButtonColor: '#3C8235'
+                    });
+
+                    closeModal(); // Close the modal after saving
                 });
             }
         });
